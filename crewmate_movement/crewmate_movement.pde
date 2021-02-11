@@ -6,17 +6,20 @@ int x,
     blockSize,
     speed;
 
+PImage crewmate;
+
 void setup() {
   size(720, 480);
   x = screenWidth / 2;
   y = screenHeight / 2;
   blockSize = screenWidth / 10;
   speed = blockSize / 10;
+  crewmate = loadImage("cyan-crewmate.png");
 }
 
 void draw() {
   background(0);
-  rect(x, y, blockSize, blockSize);
+  image(crewmate, x, y, blockSize, blockSize);
 }
 
 void keyPressed() {
