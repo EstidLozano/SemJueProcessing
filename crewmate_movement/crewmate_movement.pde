@@ -1,25 +1,21 @@
-final int screenWidth = 720,
-    screenHeight = 480;
+final int screenWidth = 720, screenHeight = 480;
 
-int x,
-    y,
-    blockSize,
-    speed;
+int x, y, crewmateSize, speed;
 
-PImage crewmate;
+PImage imgCrewmate;
 
 void setup() {
   size(720, 480);
   x = screenWidth / 2;
   y = screenHeight / 2;
-  blockSize = screenWidth / 10;
-  speed = blockSize / 10;
-  crewmate = loadImage("cyan-crewmate.png");
+  crewmateSize = screenWidth / 10;
+  speed = crewmateSize / 10;
+  imgCrewmate = loadImage("cyan_crew.png");
 }
 
 void draw() {
   background(0);
-  image(crewmate, x, y, blockSize, blockSize);
+  image(imgCrewmate, x, y);
 }
 
 void keyPressed() {
