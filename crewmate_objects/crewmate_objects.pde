@@ -1,6 +1,8 @@
 final int screenWidth = 720,
           screenHeight = 480;
-    
+
+PImage imgBg;
+
 int originX,
     originY;
 
@@ -13,6 +15,7 @@ void setup() {
   originX = screenWidth / 2;
   originY = screenHeight / 2;
   
+  imgBg = loadImage("bg.jpg");
   PImage imgCyanCrew = loadImage("cyan_crew.png"),
          imgPurpleCrew = loadImage("purple_crew.png");
   imageMode(CENTER);
@@ -27,6 +30,7 @@ void setup() {
 void draw() {
   translate(originX, originY);
   background(0);
+  image(imgBg, 0, 0, screenWidth, screenHeight);
   crew1.move();
   crew2.move();
   crew1.render();

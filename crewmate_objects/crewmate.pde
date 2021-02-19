@@ -4,7 +4,6 @@ class Crewmate {
   PImage img;
 
   float limitX, limitY;
-
   
   /*
     [0] = up
